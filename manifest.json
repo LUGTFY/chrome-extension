@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Let Us Google That For You",
+  "description": "This extension adds a button to Google searches for you to refer to LUGTFY",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "include_globs": [
+        "*://www.google.*/*"
+      ],
+      "exclude_globs": [
+        "https://analytics.google.com/analytics/web/*",
+        "https://www.google.com/webmasters/tools/search-analytics*"
+      ],
+      "js": [
+        "index.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
